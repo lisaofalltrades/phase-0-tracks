@@ -49,3 +49,22 @@ main {
   }
 }
 */
+@media screen and (min-width: 1200px) {
+  #col-1 {
+    float:left;
+    width:400px;
+  }
+  #col-2 {
+    float:right;
+    widtj:400px;
+  }
+}
+@media (min-width: 401px) {
+  span.text {display:inline-block;}
+  span.icon {display:nonr;}
+}
+@media (max-width: 400px){
+  span.icon {display:inline-block;}
+  span.text {display:none;}
+  #external-links-header {display: none;}
+}
