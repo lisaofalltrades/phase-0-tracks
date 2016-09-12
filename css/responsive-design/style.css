@@ -42,3 +42,10 @@ main {
   width: 70%;
   display:inline-block;
 }
+/* The below is for reference only
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+*/
