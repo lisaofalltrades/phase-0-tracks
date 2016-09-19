@@ -33,15 +33,23 @@ health_plan = gets.chomp.downcase
 	else
 		health_plan = false
 	end
-
+end
 answers = [name, birthdate, age, garlic_bread, health_plan]
 
 puts "Please list any allergies one at a time. Hit enter after every allergy. When complete, type done."
+	while allergies != "sunshine" && alergies != "done"
+			allergies - gets.chomp
+			if allergies == "sunshine"
+				puts "Probably a vampire."
+			else allergies == "done"
+				is_vamp(answers)
+			end
 end
+	
 
 def is_vamp(ask_vamp)
 	time = time.new
-	if (ask_vamp[0]) == "Dracula" || ask_vamp[0] == "Fang")
+	if (ask_vamp[0] == "Dracula" || ask_vamp[0] == "Fang")
 		puts "Definitely a vampire."
 	elsif (ask_Vamp[2] == time.year - ask_Vamp[1]) && (ask_Vamp[3] == true || ask_Vamp[4] == true)
 		puts "Probably not a vampire."
@@ -50,6 +58,7 @@ def is_vamp(ask_vamp)
 	elsif (ask_Vamp[2] != time.year - ask_Vamp[1]) && (ask_Vamp[3] == false || ask_Vamp[4] == false)
 		puts "Probably a vampire."
 	else
-		puts "Results inconclusive."
+		puts "Hrmm... Not sure!"
 	end
 end
+new_hire_process
