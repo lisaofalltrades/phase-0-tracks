@@ -37,4 +37,4 @@ health_plan = gets.chomp.downcase
 
 answers = [name, birthdate, age, garlic_bread, health_plan]
 
-puts "Please list any allergies one at a time. Hit "enter" after every allergy. When complete, type "done"."
+puts "Please list any allergies one at a time. Hit enter after every allergy. When complete, type done."
