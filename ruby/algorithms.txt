@@ -1,0 +1,20 @@
+1. Robot Elavator Algorithm
+-Face elevator and focus on the 2 white buttons that call the elevator
+	-If you want to go upstairs, push the top button
+	-else, push the bottom button to go downstairs
+-Enter elevator once it arrives and the doors open
+-Enter elevator and rotate to face the panel of buttons
+-Select the floor you wish to travel to
+-Wait patiently until the elevator reaches the floor and calls out the 
+name of the floor
+-Exit
+
+2. Laundry Algorithm
+-Gather dirty laundry and sort by the following categories: 
+	brights, whites, and darks
+-Each category will be washed separately so colors don't bleed
+-Place laundry into washing machine and add 1/2 cup of detergent
+-Adjust the settings by turning the knobs to a gentle cycle and cold water ONLY
+-Start the cycle pressing start
+-close the washing machine lid
+-The laundry machine will turn off automatically when it's complete
