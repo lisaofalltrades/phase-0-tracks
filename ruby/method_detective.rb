@@ -20,13 +20,19 @@
 #"Stop! You’re under arrest!".replace("STOP! YOU’RE UNDER ARREST!")
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+#"the usual".replace("the usual suspects")
+#"the usual".insert(9, " suspects")
+#"the usual" << " suspects"
 #=> "the usual suspects"
 
-# " suspects".<???>
+#" suspects".replace("the usual suspects")
+#" suspects".insert(0, "the usual")
+#" suspects".prepend("the usual")
 # => "the usual suspects"
 
-# "The case of the disappearing last letter".<???>
+#"The case of the disappearing last letter".replace("The case of the disappearing last lette")
+#"The case of the disappearing last letter"[0, 39]
+#"The case of the disappearing last letter".chop
 # => "The case of the disappearing last lette"
 
 # "The mystery of the missing first letter".<???>
