@@ -4,3 +4,11 @@
 #map each character to next vowel or consonant using get_next method
 # - if character is not a letter, return the character without changing it
 # - check whether vowel or consonant and map to next vowel or consonant accordingly
+
+def is_vowel(letter)
+	"aeiou".include?(letter.downcase)
+end
+
+def is_letter(letter)
+	letter =~ /[a-zA-Z]/
+end
