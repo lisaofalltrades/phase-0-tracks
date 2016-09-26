@@ -25,7 +25,7 @@ client_info={
 	decor_pet_peeve: nil,
 	has_pool: nil,
 }
-puts "Welcome to the Client Data Base"
+puts "Welcome to the Client Database"
 
 client_info.each {|key, value| puts "Please enter value for #{key}:"
 	if key == :client_age || key == :num_children
@@ -51,3 +51,5 @@ else
 	puts "Not a valid input."
 end
 client_info.each {|key, value| puts "#{key.upcase}: #{value}"}
+
+puts "Thank you for using the Client Database"
