@@ -17,7 +17,7 @@ Pseudocode
 =end
 
 client_info={
-	client_name: nil,
+	client_full_name: nil,
 	client_age: nil,
 	client_location: nil,
 	num_children: nil,
@@ -26,3 +26,11 @@ client_info={
 	has_pool: nil,
 }
 puts "Welcome to the Client Data Base"
+
+client_info.each {|key, value| puts "Please enter value for #{key}:"
+	if key == :client_age || key == :num_children
+		client_info[key] = gets.chomp.to_i
+	else
+		client_info[key] = gets.chomp
+	end
+}
