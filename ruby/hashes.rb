@@ -21,7 +21,7 @@ client_info={
 	client_age: nil,
 	client_location: nil,
 	num_children: nil,
-	decor_pref: nil,
+	decor_preference: nil,
 	decor_pet_peeve: nil,
 	has_pool: nil,
 }
@@ -34,3 +34,5 @@ client_info.each {|key, value| puts "Please enter value for #{key}:"
 		client_info[key] = gets.chomp
 	end
 }
+client_info.each {|key, value| puts "#{key.upcase}: #{value}"}
+puts "Is the data above correct? If NO, enter the name of the field you wish to change. If YES, type 'none'"
