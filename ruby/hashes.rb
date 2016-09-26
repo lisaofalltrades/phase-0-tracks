@@ -36,3 +36,18 @@ client_info.each {|key, value| puts "Please enter value for #{key}:"
 }
 client_info.each {|key, value| puts "#{key.upcase}: #{value}"}
 puts "Is the data above correct? If NO, enter the name of the field you wish to change. If YES, type 'none'"
+
+change = gets.chomp
+if client_info.has_key?(change.to_sym)
+	puts "Please enter new value for #{change}:"
+	if change.to_sym == :client_age || change.to_sym == :client_children
+		client_info[change.to_sym] = gets.chomp.to_i
+	else
+		client_info[change.to_sym] = gets.chomp
+	end
+elsif change == 'none'
+	puts "Great"
+else
+	puts "Not a valid input."
+end
+client_info.each {|key, value| puts "#{key.upcase}: #{value}"}
