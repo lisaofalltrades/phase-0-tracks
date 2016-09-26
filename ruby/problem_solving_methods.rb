@@ -47,7 +47,16 @@ p fib(100).last == 218922995834555169026
 3. Notice your emotional state as you tackle this algorithm: do you feel frustrated, underqualified, stupid, or overwhelmed? Or is it more like excitement and curiosity? How do you think these feelings affect your ability to learn?
 3A I feel overwhemled and lost.
 4. Pseudocode a sorting method that takes an array of integers and uses a sorting algorithm. The method should return a sorted version of the array. Your pseudocode should not be Ruby-specific.
-
+-identify how many variables are in a list
+-identify each variable and the one next to it
+-compare and indentify which one is lower
+-move the lower one to the left
+-if they are the same, keep it as is
+-move up 1 index
+-once the end is reached
+-repeat until the whole list is sorted in order
+-end
+-display newly sorted list
 5. Implement the sorting method in Ruby.
 
 def bubble_sort(array)
