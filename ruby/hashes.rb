@@ -15,3 +15,14 @@ Pseudocode
 -If the entry is not "none", allow the user to update the value for the key they input
 -Print the updated version of the hash to the screen
 =end
+
+client_info={
+	client_name: nil,
+	client_age: nil,
+	client_location: nil,
+	num_children: nil,
+	decor_pref: nil,
+	decor_pet_peeve: nil,
+	has_pool: nil,
+}
+puts "Welcome to the Client Data Base"
