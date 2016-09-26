@@ -4,3 +4,4 @@ san_diego_group = {
 	car_3: ['Dolly','Steven','BJ','Michael']
 }
 p san_diego_group[:car_2][2]
+p san_diego_group[:car_3]
