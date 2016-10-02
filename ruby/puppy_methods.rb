@@ -14,6 +14,18 @@ class Puppy
   		puts "Woof"
   	end
   end
+  def roll_over
+  	puts "*rolls over*"
+  end
 
+  def dog_years(human_age)
+  	human_age * 7
+  end
+
+  def stay(seconds)
+  	seconds.times do |second|
+  		puts "Waited #{second + 1} seconds.."
+  	end
+  end
 end
 
