@@ -5,5 +5,11 @@ class Puppy
     toy
   end
 
+   def speak(number)
+  	number.times do |eachtime|
+  		puts "Woof"
+  	end
+  end
+
 end
 
