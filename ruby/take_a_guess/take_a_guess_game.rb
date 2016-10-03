@@ -58,7 +58,7 @@ class Take_a_guess
 end
 
 #### game driver ####
-game = Word_guessing_game.new
+game = Take_a_guess.new
 
 puts "Welcome to the word guessing game!"
 puts "Please enter a word or phrase for the second player to guess: "
@@ -79,11 +79,11 @@ while !game.won(game.actual_phrase, game.hidden_phrase, game.guess_count, total_
 	puts game.guess_char(char_guess, game.actual_phrase, hidden)
 	puts "Number of guesses so far: #{game.guess_count}"
 	if game.guess_count >= game.total_guesses_available
-		puts "Sorry, you are really horrible at this."
+		puts "Game over. Please try again."
 		break
 	end
 end
 
 if game.guess_count < game.total_guesses_available
-	puts "OMG, you win!"
+	puts "Congratualations!!"
 end
