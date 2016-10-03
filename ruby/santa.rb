@@ -56,3 +56,7 @@ end
 # p arr_of_santa_objects[0].ethnicity
 
 # p arr_of_santa_objects[0]
+
+genders = ["agender", "female", "bigender", "male", "gender fluid", "N/A", "gender neutral"]
+ethnicities = ["black", "Latino", "white", "Japanese", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "German", 
+	"French", "Italian","Polish", "Irish", "English", "Armenian", "Iranian", "Jewish", "asian", "mongolian", "Russian"]
