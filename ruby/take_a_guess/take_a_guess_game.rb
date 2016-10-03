@@ -56,3 +56,34 @@ class Take_a_guess
 		end
 	end
 end
+
+#### game driver ####
+game = Word_guessing_game.new
+
+puts "Welcome to the word guessing game!"
+puts "Please enter a word or phrase for the second player to guess: "
+
+hidden = game.convert(game.actual_phrase = gets.chomp)
+
+100.times {|star| puts "* * * * *"}
+
+puts "Hello second player, do not scroll up!"
+
+puts "The word or phrase to guess: #{hidden}"
+
+total_guesses = game.guess_amount(hidden)
+
+while !game.won(game.actual_phrase, game.hidden_phrase, game.guess_count, total_guesses)
+	puts "Please guess a character in the phrase (you have #{game.total_guesses_available} guesses): "
+	char_guess = gets.chomp
+	puts game.guess_char(char_guess, game.actual_phrase, hidden)
+	puts "Number of guesses so far: #{game.guess_count}"
+	if game.guess_count >= game.total_guesses_available
+		puts "Sorry, you are really horrible at this."
+		break
+	end
+end
+
+if game.guess_count < game.total_guesses_available
+	puts "OMG, you win!"
+end
