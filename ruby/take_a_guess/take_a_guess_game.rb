@@ -46,4 +46,13 @@ class Take_a_guess
 		@hidden_phrase = obfuscated_phrase
 		return @hidden_phrase
 	end
+	def won(stored_phrase, obfuscated_phrase, guess_amount, number_of_guesses)
+		@guess_count = guess_amount
+		@total_guesses_available = number_of_guesses
+		if stored_phrase == obfuscated_phrase
+			return true
+		else
+			return false
+		end
+	end
 end
