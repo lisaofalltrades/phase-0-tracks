@@ -13,4 +13,28 @@
 #		-Otherwise provide the user with a notice that they've used up a guess and provide the user with the previous visualization
 #-If the user gets the full phrase to be uncovered within the number of guesses provided, print a congratulatory message
 #	-Otherwise print "Game over"
-#
+=end
+
+require_relative 'take_a_guess_game'
+
+describe Take_a_guess do
+
+	let(:take_a_guess) { Take_a_guess.new }
+	
+	it "converts a string to a number of underscores and dashes" do
+		expect(take_a_guess.convert("test string")).to eq "____ ______"
+	end
+
+	it "determines an amount of guesses to allow the user based on string size (1/2)" do
+		expect(take_a_guess.guess_amount("____ ______")).to eq 10
+	end
+
+	it "asks the user to guess a character, keeps track of the guess, removes a guess if it has not been guessed, and returns the uncovered string" do
+		expect(take_a_guess.guess_char("s", "test string", "____ ______")).to eq "__s_ s_____"
+	end
+
+	it "tells the user they won if all letters have been uncovered before guesses are up" do
+		expect(take_a_guess.won("test string", "test string", 5, 6)).to eq true
+	end
+
+end
