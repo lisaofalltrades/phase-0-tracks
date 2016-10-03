@@ -7,3 +7,6 @@ module Shout
     words + "!!!" + " :)"
   	end
 end
+
+# p Shout.yell_angrily("AHHHH, I HATE EVERYONE")
+# p Shout.yell_happily("AHHHH, I LOVE EVERYONE")
