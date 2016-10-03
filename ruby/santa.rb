@@ -60,3 +60,13 @@ end
 genders = ["agender", "female", "bigender", "male", "gender fluid", "N/A", "gender neutral"]
 ethnicities = ["black", "Latino", "white", "Japanese", "prefer not to say", "Mystical Creature (unicorn)", "N/A", "German", 
 	"French", "Italian","Polish", "Irish", "English", "Armenian", "Iranian", "Jewish", "asian", "mongolian", "Russian"]
+
+num_of_santas = 500
+until num_of_santas == 0
+	new_santa = Santa.new(genders.shuffle![0], ethnicities.shuffle![0])
+	birthdays = Random.new
+	birthdays.rand(140).times {|celebrate| new_santa.celebrate_birthday}
+	p new_santa.ethnicity
+	p new_santa.age
+	num_of_santas -= 1
+end
