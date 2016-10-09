@@ -7,23 +7,28 @@
 #require_relative links another ruby file required to make the first work. the first one uses code from the linked ruby file
 #require vs require_relative: require is a simplier method
 #require is simplier and is used to access something in your ruby library
+
 require_relative 'state_data'
 
 class VirusPredictor
-#starts up new instance of virus detector
+
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
+
 #calling predicted deaths and speed of deaths
+
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
   private
+
 #calculates predicted deaths with pop density and population then prints results
+
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,7 +46,9 @@ class VirusPredictor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
+
 #calculates speed of spread with pop density & prints results
+
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -69,7 +76,6 @@ end
 
 # DRIVER CODE
  # initialize VirusPredictor for each state
-
 
 # alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 # alabama.virus_effects
@@ -111,3 +117,4 @@ hash.each_value
 What concept did you most solidify in this challenge?
   Accessing a hash within a hash!!
 =end
+
