@@ -1,86 +1,113 @@
-# def blocktaker
-#     puts "Before yield"
-#     yield("Chocolate", "Raspberry")
-#     puts "After yield"
-# end
+##############5.3 Pairing Session with Candace Lazarou###################
+#R0 Method that takes block, and a block that prints its parameters
 
-# blocktaker { |flavor1, flavor2| puts "I love #{flavor1}, but not as much as #{flavor2}."}
+def status
+ puts "this is a before status"
+ yield("chocolate","candy cane")
+ puts "this is an end status"
+end
 
-# ice_cream = ["Blackberry", "Neopolitan", "Moose tracks", "Mint", "Vanilla"]
-# colors = {
-#     blue: "eulb",
-#     orange: "egnaro",
-#     green: "neerg",
-#     white: "etihw",
-#     black: "kcalb"
-# }
+status{|candy1,candy2| puts "candy1: #{candy1}, candy2: #{candy2}"}
 
-# upcase_flavor = []
-# p ice_cream
+#R1 Q1 declare an array and a hash
 
-# ice_cream.each do |flavor|
-#     upcase_flavor << flavor.upcase
-#     p "I LOVE #{flavor.upcase}"    
-# end
-# print upcase_flavor
+candy_types = ["chocolate","candy cane","gummy bear"]
 
-# p ice_cream
-# ice_cream.map! do |flavor|
-#     flavor + "!!!!!!"
-# end
-# p ice_cream
-
-# p colors
-# colors.each do |color, backwards|
-#     p "#{backwards} is #{color} spelled backwards!"
-# end
-
-
-array = [1, 5, 9, 11, 3, 4]
-hash = {
-    horror: "Scream",
-    action: "Indiana Jones",
-    comedy: "Zoolander",
-    romantic: "Titanic",
-    science_fiction: "Star wars"
+candy_eaters = {
+ tom: "hersheys",
+ jerry: "reeses",
+ mary: "hot cheetos mac n' cheese"
 }
-#--------------Release 2 Q1 Array--------------------
-# high_array = []
-# array.each do |number|
-#     high_array = array.delete_if{|array| array < 5}
-# end 
-# puts "Numbers in the array higher than 5 are #{high_array}."
-#--------------Release 2 Q1 Hash---------------------
-# new_hash = hash.each do |genre, movie|
-#     hash.delete_if {|genre| genre == :comedy}
-# end
-# p new_hash
 
-#--------------Release 2 Q2 Array--------------------
-# low_array = []
-# array.each do |number|
-#     low_array = array.keep_if{|array| array <= 5}
-# end
-# puts "Numbers in the array lower than 5 are #{low_array}."
-#--------------Release 2 Q2 Hash---------------------
+#R1 Q2 Iterating with .each and .map! on array and hash
 
-# keep_hash = hash.each do |genre, movie|
-#     hash.keep_if {|genre| genre != :horror}
-# end
-# p keep_hash
-#--------------Release 2 Q3 Array---------------------
-# even_array = []
-# array.each do |num|
-#     even_array = array.select{ |num| num.even?}
-# end
-# p even_array
-#--------------Release 2 Q3 Hash---------------------
-# new_hash = {}
-# new_hash = hash.each do |genre, movie|
-#     hash.select! {|genre| genre == :horror }
-# end
-# p new_hash
+candy_types.each do |type|
+ puts "I love #{type}!"
+end
 
-#------------Release 2 Q4 Hash-------------------------
+candy_eaters.each do |person,food|
+ puts "#{person} loves #{food}!"
+end
 
-p hash.reject! {|genre, movie| genre == :science_fiction}
+puts "candy_types array before we call .map!: #{candy_types}"
+
+candy_types.map! do |type|
+ type + "!"
+end
+
+puts "candy_types array after we call .map!: #{candy_types}"
+
+#5.3r2 Finding methods in documentation
+#Make sure to comment out other examples while testing each method, or the destructive methods may affect outcome
+
+cables = ["USB", "instrument", "HDMI", "Thunderbolt"]
+
+instrument_players = {
+ tom: "guitar",
+ jerry: "drums",
+ mary: "sitar"
+}
+
+#.delete_if
+
+#...on an array
+puts "cables array before .delete_if: #{cables}"
+cables.delete_if do |cable_type|
+ cable_type == "instrument"
+end
+puts "cables array after .delete_if: #{cables}"
+
+#...on a hash
+puts "instrument_players array before .delete_if: #{instrument_players}"
+instrument_players.delete_if do |musician,instrument|
+ instrument == "guitar"
+end
+puts "instrument_players array after .delete_if: #{instrument_players}"
+
+#.select
+
+#...on an array
+cable_selection = cables.select do |cable_type|
+ cable_type == "HDMI"
+end
+
+puts cable_selection
+
+#...on a hash
+musician_and_instrument = instrument_players.select do |musician,instrument|
+ instrument == "guitar"
+end
+
+puts musician_and_instrument
+
+#.keep_if
+
+#...on an array
+cable_selection = cables.keep_if do |cable_type|
+ cable_type == "HDMI"
+end
+
+puts cable_selection
+
+#...on a hash
+musician_and_instrument = instrument_players.keep_if do |musician,instrument|
+ instrument == "guitar"
+end
+
+puts musician_and_instrument
+
+#.reject!
+
+#...on an array
+puts "cables array before .reject!: #{cables}"
+cables.reject! do |cable_type|
+ cable_type.upcase.include? "S"
+end
+puts "cables array after .reject!: #{cables}"
+
+#...on a hash
+puts "instrument_players hash before .reject!: #{instrument_players}"
+instrument_players.reject! do |musician,instrument|
+ instrument == "guitar"
+end
+puts "instrument_players hash after .reject!: #{instrument_players}"
