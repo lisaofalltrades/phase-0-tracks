@@ -34,6 +34,14 @@ grocery_items = list("carrots apples cereal pizza")
 # steps:
 # output:
 
+def add_item(list,new_item,quantity=1)
+	list[new_item] = quantity
+end
+
+add_item(grocery_items,"potato", 5)
+
+print_list(grocery_items)
+
 # Method to remove an item from the list
 # input:
 # steps:
