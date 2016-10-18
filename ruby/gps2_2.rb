@@ -1,3 +1,14 @@
+# Method to print a list and make it look pretty
+# input: iterate through each key/value pair
+# steps: print on screen
+# output: list
+
+def print_list(list)
+	list.each do |item, quantity|
+	puts "#{item}: #{quantity}"
+	end
+end
+
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -12,8 +23,8 @@ def list(string)
 	hash = Hash.new
 	grocery_items.each do |item|
 		hash[item] = 1
-	end	
-	p hash
+	end
+	print_list(hash)
 end
 
 grocery_items = list("carrots apples cereal pizza")
@@ -33,7 +44,3 @@ grocery_items = list("carrots apples cereal pizza")
 # steps:
 # output:
 
-# Method to print a list and make it look pretty
-# input:
-# steps:
-# output:
