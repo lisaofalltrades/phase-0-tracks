@@ -9,7 +9,11 @@
 # output: hash
 def list(string)
 	grocery_items = string.split(" ")
-	
+	hash = Hash.new
+	grocery_items.each do |item|
+		hash[item] = 1
+	end	
+	p hash
 end
 
 grocery_items = list("carrots apples cereal pizza")
