@@ -7,8 +7,12 @@
   # set default quantity
   # print the list to the console [use print method]
 # output: hash
+def list(string)
+	grocery_items = string.split(" ")
+	
+end
 
-
+grocery_items = list("carrots apples cereal pizza")
 
 # Method to add an item to a list
 # input: item name and optional quantity
