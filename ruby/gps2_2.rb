@@ -62,3 +62,15 @@ end
 
 update_item(grocery_items, "apples", 5)
 print_list(grocery_items)
+
+=begin
+Release 4: Reflect
+On your own, add a commented reflection section to your gps2_2.rb file. Answer the following questions in your reflection:
+
+What did you learn about pseudocode from working on this challenge?
+What are the tradeoffs of using arrays and hashes for this challenge?
+What does a method return?
+What kind of things can you pass into methods as arguments?
+How can you pass information between methods?
+What concepts were solidified in this challenge, and what concepts are still confusing?
+=end
