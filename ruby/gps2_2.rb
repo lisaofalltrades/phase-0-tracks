@@ -64,13 +64,26 @@ update_item(grocery_items, "apples", 5)
 print_list(grocery_items)
 
 =begin
-Release 4: Reflect
-On your own, add a commented reflection section to your gps2_2.rb file. Answer the following questions in your reflection:
 
-What did you learn about pseudocode from working on this challenge?
-What are the tradeoffs of using arrays and hashes for this challenge?
-What does a method return?
-What kind of things can you pass into methods as arguments?
-How can you pass information between methods?
-What concepts were solidified in this challenge, and what concepts are still confusing?
+Release 4: Reflect
+
+1. What did you learn about pseudocode from working on this challenge?
+Pseudocode is harder than you think! Something that might seem so obvious to me may not be obvious to someone else.
+
+2. What are the tradeoffs of using arrays and hashes for this challenge?
+Arrays don't have the ability to store a quantity of an item.
+
+3. What does a method return?
+A method returns an action. You set this action by writing the rules inside the method.
+So when you call the method, it "does" the action. 
+
+4. What kind of things can you pass into methods as arguments?
+Numbers, strings, booleans, & data structures.
+
+5. How can you pass information between methods?
+Through a parameter. 
+
+6. What concepts were solidified in this challenge, and what concepts are still confusing?
+I appreciated being able to practice interating through hashes as well as calling a method within a method.
+
 =end
