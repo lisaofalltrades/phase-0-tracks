@@ -6,3 +6,5 @@ After every example try your own example or try to play with the code given to b
 Don't take a break as long as you find the material stimulating and engaging. If this isn't working find an alternative resource, and if that doesn't work, take a short break.
 Do not gloss over a topic that you do not understand simply because you think it won't be relevant. Put all of these topics in a file to refer to later if it's taking too much time now.
 Stop and think about applications this will have for your own projects and interests before moving onto the next topic.
+
+It appears that the most effective strategies for me were number 2, 5, and 6.
